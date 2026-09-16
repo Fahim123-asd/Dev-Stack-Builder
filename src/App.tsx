@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import  Nav  from "./components/Nav";
 import Technologies from "./components/Technologies";
 import type { IDevsType } from "./type/Type";
+import Footer from "./components/Footer";
 const devFetch = async() : Promise<IDevsType[]>=>{
   const res = await fetch("/public/Data.json")
   const data = await res.json();
@@ -17,6 +18,7 @@ function App() {
       <Suspense fallback={<h2>Loading data.....</h2>}>
         <Technologies devPromise = {devPromise}></Technologies>
       </Suspense>
+      <Footer></Footer>
     </>
   )
 }
