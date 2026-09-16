@@ -44,7 +44,7 @@ const YourStack = ({
               </div>
               <button
                 onClick={() => handleRemove(selectedTechnology.id)}
-                className="text-3xl text-gray-400"
+                className="text-4xl text-gray-400"
               >
                 ×
               </button>
