@@ -1,4 +1,5 @@
 import { use, useState } from "react";
+import { toast} from "react-toastify";
 import type { IDevsType } from "../type/Type";
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
@@ -17,6 +18,7 @@ const Technologies = ({ devPromise }: devPromiseProps) => {
   );
 
   if (isAlreadyExists.length > 0) {
+     toast.warning("Technology already added!");
     return;
   }
 
@@ -24,15 +26,18 @@ const Technologies = ({ devPromise }: devPromiseProps) => {
     ...selectedTechnologies,
     technology,
   ]);
+   toast.success(`${technology.name} added to stack!`);
 };
 const handleRemove = (id: string): void => {
   setSelectedTechnologies((tech) =>
     tech.filter((technology) => technology.id !== id)
   );
+  toast.info("Technology removed from stack!");
 };
 
 const handleRemoveAll = (): void => {
   setSelectedTechnologies([]);
+  toast.error("All technologies removed!");
 };
   return (
     <div className="my-4 px-3 py-3 container mx-auto p-4">
