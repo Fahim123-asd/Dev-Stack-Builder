@@ -34,7 +34,7 @@ const Footer = () => {
           <p className="mt-4">Terms of Service</p>
         </div>
       </div>
-      <div className="flex justify-between container mx-auto m-11">
+      <div className="flex justify-between container mx-auto m-6">
         <h2>© 2026 Dev Stack. All rights reserved.</h2>
         <div className="flex gap-6">
             <p>Privacy</p>
