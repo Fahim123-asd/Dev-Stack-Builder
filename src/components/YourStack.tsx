@@ -56,7 +56,7 @@ const YourStack = ({
         {selectedTechnologies.length > 0 && (
           <button
             onClick={handleRemoveAll}
-            className="w-full mt-16 h-12 rounded-xl border border-red-300 text-red-500 font-bold"
+            className="w-full mt-15 h-12 rounded-xl border border-red-300 text-red-500 font-bold"
           >
             Remove All
           </button>
