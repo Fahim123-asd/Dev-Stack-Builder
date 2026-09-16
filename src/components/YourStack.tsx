@@ -52,7 +52,7 @@ const YourStack = ({
           );
         })}
       </div>
-      <div className="mt-4">
+      <div className="mt-5">
         {selectedTechnologies.length > 0 && (
           <button
             onClick={handleRemoveAll}
